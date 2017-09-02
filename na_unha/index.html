@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author:" content="O.K.D.G - www.haresoft.com.br">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="css/estilo.css">
+        <title>Cam na unha</title>
+    </head>
+    <body>
+        <div class="camera_snap">
+            <video autoplay id="vid"></video>
+            <canvas id="canvas1" width="640" height="480"></canvas><br/>
+            
+            <script type="text/javascript">
+                var video = document.querySelector("#vid");
+                var canvas = document.querySelector('#canvas');
+                var ctx = canvas.getContext('2d');
+                var localMediaStream = null;
+                var onCameraFail = function(e) {
+                    console.log('Não funcionou ://// .', e);
+                };   
+                function snapshot() {
+                    if (localMediaStream) {
+                        ctx.drawImage(video, 0, 0);
+                    }
+                }
+                navigator.getUserMedia = navigator.getUserMedia
+                || navigator.webkitGetUserMedia
+                || navigator.mozGetUserMedia
+                || navigator.msGetUserMedia;
+                window.URL = window.URL || window.webkitURL;
+                navigator.getUserMedia({
+                    video : true
+                }, function(stream) {
+                    video.src = window.URL.createObjectURL(stream);
+                    localMediaStream = stream;
+                }, onCameraFail);
+            </script>
+        </div>
+    </body>
+</html>
