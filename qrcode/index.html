@@ -36,7 +36,11 @@
                         <li class="empty">No scans yet</li>
                     </ul>
                     <transition-group name="scans" tag="ul">
-                        <li v-for="scan in scans" :key="scan.date" :title="scan.content">{{ scan.content }}</li>
+                        <script>
+                            var teste = "scan.content";
+                        </script>
+
+                        <li v-for="scan in scans" :key="scan.date" :title="scan.content" ><a href="#" onclick="window.open('http://www.google.com.br?id=' + )">{{ scan.content }}</a></li>
                     </transition-group>
                 </section>
             </div>
