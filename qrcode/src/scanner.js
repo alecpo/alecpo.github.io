@@ -192,6 +192,12 @@ class Scanner extends EventEmitter {
       this.video.classList.remove('inactive');
       this.video.classList.add('active');
     });
+      
+    this.addListener('scan', function (content) {
+      if (content.match(/^https?:\/\//i)) {
+        window.open(content);
+      }
+    });
 
     this.addListener('inactive', () => {
       this.video.classList.remove('active');

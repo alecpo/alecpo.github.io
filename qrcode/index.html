@@ -37,10 +37,12 @@
                     </ul>
                     <transition-group name="scans" tag="ul">
                         <script>
-                            var teste = "scan.content";
+                            var teste = {{ scan.content }};
                         </script>
 
-                        <li v-for="scan in scans" :key="scan.date" :title="scan.content" ><a href="#" onclick="window.open('http://www.google.com.br?id=' + )">{{ scan.content }}</a></li>
+                        <li v-for="scan in scans" :key="scan.date" :title="scan.content" ><a href="#" onclick="window.open('http://www.google.com.br?id=' + teste)">{{ scan.content }}</a></li>
+                        
+                        
                     </transition-group>
                 </section>
             </div>
