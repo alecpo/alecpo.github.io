@@ -75,10 +75,16 @@ class ScanProvider {
 
     let result = this._analyze(true);
     if (result) {
-      setTimeout(() => {
+        setTimeout(() => {
         this._emitter.emit('scan', result.content, result.image || null);
-      }, 0);
+        }, 0);
+        this.addListener('scan', function (result.content) {
+          if (result.content.match(/^https?:\/\//i)) {
+            window.open(result.content);
+          }
+        });
     }
+    
   }
 }
 
@@ -191,12 +197,6 @@ class Scanner extends EventEmitter {
     this.addListener('active', () => {
       this.video.classList.remove('inactive');
       this.video.classList.add('active');
-    });
-      
-    this.addListener('scan', function (content) {
-      if (content.match(/^https?:\/\//i)) {
-        window.open(content);
-      }
     });
 
     this.addListener('inactive', () => {
