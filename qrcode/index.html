@@ -33,10 +33,19 @@
                 <section class="scans">
                     <h2>Scans</h2>
                     <ul v-if="scans.length === 0">
+                        
                         <li class="empty">No scans yet</li>
                     </ul>
-                    <transition-group name="scans" tag="ul">
-                        <li v-for="scan in scans" :key="scan.date" :title="scan.content">{{ scan.content }}</li>
+                    
+                    <transition-group name="scans" tag="ul">                        
+                        
+                        <li v-for="scan in scans" href="javascript:void(null);" onclick="myFunction(title);" :key="scan.date" :title="scan.content" ><h3><a href="javascript:void(null);" >Informações para contato!</a></h3></li>
+                        
+                        <script>
+                            function myFunction(conteudo) {
+                                window.open(conteudo);
+                            }
+                        </script>
                     </transition-group>
                 </section>
             </div>
