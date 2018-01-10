@@ -19,14 +19,16 @@ connection.onstream = function(event) {
     document.body.appendChild( event.mediaElement );
 };
 
-var predefinedRoomId = 'YOUR_Name';
+var roomid = document.getElementById('txt-roomid');
+
+roomid.value = connection.token();
 
 document.getElementById('btn-open-room').onclick = function() {
     this.disabled = true;
-    connection.open( predefinedRoomId );
+    connection.open( roomid.value || 'galera');
 };
 
 document.getElementById('btn-join-room').onclick = function() {
     this.disabled = true;
-    connection.join( predefinedRoomId );
+    connection.join( roomid.value || 'galera' );
 };
