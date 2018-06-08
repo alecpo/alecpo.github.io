@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Fechadura Virtual</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+
+  <center><body>
+    
+    <section class="container flex">
+      <div class="item"><img src="imagens/lock.png" width="70" height="70" >  </div>
+      <div class="item"><h1>Fechadura Virtual (Virtual Lock)</h1></div>      
+    </section>
+    
+    <h3>Aperte o botao para dar um novo comando!</h3>
+
+    <i class="fas fa-microphone fa-3x" style="cursor: pointer; "></i>
+    
+    <br><br>
+
+    <div class="abrir" onclick="acao_abrir()"></div>
+    <div class="fechar" onclick="acao_fechar()"></div>
+    
+    <center><img id="porta_f" src="imagens/porta_fechada.gif">
+    <img id="porta_aa" src="imagens/porta_abrindo.gif" style="display: none;">
+    <img id="porta_a" src="imagens/porta_aberta.gif" style="display: none;">
+    <img id="porta_af" src="imagens/porta_fechando.gif" style="display: none;"></center>
+
+    <script>
+      function acao_abrir(){
+        var isOpen = $( "#porta_a" ).is( ":visible" );
+        if(!isOpen){  
+            $("#porta_f").attr("style", "display:none;");
+            $("#porta_aa").attr("style", "display:block;");
+            setTimeout(troca, 1500);
+        }
+        else
+          alert("Denovo?");
+      }
+      function troca() {//substitui gif por imagem parada.
+          $("#porta_aa").attr("style", "display:none;");
+          $("#porta_a").attr("style", "display:block;");
+      }
+      function acao_fechar(){
+        var isOpen = $( "#porta_a" ).is( ":visible" );
+        if(isOpen){
+          $("#porta_a").attr("style", "display:none;");
+          $("#porta_af").attr("style", "display:block;");
+          setTimeout(troca1, 1500);
+        }
+        else
+          alert("Denovo?");
+      }
+      function troca1() {//substitui gif por imagem parada.
+          $("#porta_af").attr("style", "display:none;");
+          $("#porta_f").attr("style", "display:block;");
+      }
+    </script> 
+
+    <div>
+        <p class="phrase" style="display: none;">Comando...</p>
+        <p class="result" style="display: none;">Resultado</p>
+        <h3 class="output">Frase dita</h3>
+    </div>
+
+    <script src="script.js"></script>
+
+  </body></center>
+</html>
