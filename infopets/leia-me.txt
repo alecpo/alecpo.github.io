@@ -1,0 +1,3 @@
+workspace/infopets_U/config.ini = configuração para BD do Haresoft
+
+workspace/infopets_U/php/config.ini = configuração para BD do 000webhost

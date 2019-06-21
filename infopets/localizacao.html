@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <title>Google Maps API v3: Criando rotas</title>
+        <link rel="stylesheet" type="text/css" href="css/mapa.css">
+    </head>
+ 
+    <body>
+    	<div id="site">
+        
+        	<h1>Localização - Info Pets</h1>
+        
+            <form method="post" action="localizacao.html">
+                <fieldset>                    
+                    <div>
+                        <input type="hidden" id="txtEnderecoPartida" name="txtEnderecoPartida" />
+                    </div>
+                    
+                    <div>
+                        <input type="hidden" id="txtEnderecoChegada" name="txtEnderecoChegada" value="-19.8584094,-43.9183829"/>
+                    </div>
+                    
+                    <div>
+                        <input style="display: none" type="submit" id="btnEnviar" name="btnEnviar" value="Enviar"/>
+                    </div>
+                </fieldset>
+            </form>
+        
+            <div id="mapa"></div>
+            
+            <div id="trajeto-texto"></div>
+        
+        </div>
+        
+        <script src="js/jquery.min.js"></script>
+		
+        <!-- Maps API Javascript -->
+		<!-- <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> -->
+        <script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBH4zNV2RmBUM5tmWh_3h-Wds2i5jD2mHM&callback=initMap&sensor=false">
+		</script>
+ 
+        <!-- Arquivo de inicialização do mapa -->
+		<script src="js/mapa.js"></script>
+    </body>
+</html>

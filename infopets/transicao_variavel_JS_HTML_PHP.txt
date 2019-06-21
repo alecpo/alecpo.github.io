@@ -1,0 +1,7 @@
+variavel PHP em javascript:
+
+echo "<script language='javascript' type='text/javascript'>alert('$botao');</script>";
+
+variavel PHP em input de HTML:
+
+<input id="senha" name="senha" type="hidden" value="<?php echo $senha;?>" required="">

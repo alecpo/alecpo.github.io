@@ -1,0 +1,6 @@
+Coordenada PUC Minas - São Gabriel
+
+lat = -19.8584094
+long = -43.9183829
+
+-19.8584094,-43.9183829

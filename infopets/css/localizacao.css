@@ -1,0 +1,21 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#map{    
+    height: 80%;
+    width: 60%;
+    margin: 5% 20%;
+    margin: 5% 20%;
+}/*
+.main{
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}*/
+

@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author:" content="O.K.D.G - www.haresoft.com.br">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/estilo.css">
+        <title>Info Pets</title>
+
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+                <img class="patinha patinha_mobile" src="./img/login/patinha.png">
+                <b><p class="infopets infopets_mobile" >Info Pets</p></b>
+            </div>
+        </header>
+        <section>
+            <div id="mosaico1">
+                <img id="cat" width=250 height="auto"  src="img/login/pets/mosaicoGato.jpg">
+            </div>
+            <div class="div_info">
+                <legend id="titulo"><h1>Login</h1></legend>
+                <p id="msg1" >Faça o login com seu cadastro Info Pets</p>
+                <form method="POST" action="php/login.php">                  
+                   <input id="login" name="login" type="text" placeholder="Digite o seu usuário" required="">
+                   <input id="senha" name="senha" type="password" placeholder="Digite sua senha" required="">        
+                   <input type="submit" value="Entrar" id="entrar" name="entrar" class="btn btn-success">
+                   <a id="registrar" href="cadastro.html" class="btn btn-primary">Cadastre-se</a>
+                </form>
+                <p id="msg2">Esqueceu sua senha?</p>
+                <p id="msg3">Ou continue com</p>
+                <hr id="linha1" align="center" size="1" color=black>
+                <hr id="linha2" align="center" size="1" color=black>
+            </div>
+            
+            <div id="mosaico2">
+                <img id="dog" width="250" height="auto" src="img/login/pets/mosaicoCatioro.jpg">
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <b><p id="msg4" align="justify" >Achou um animal perdido? Ajude seu dono a recupera-lo! Utilizando um smartphone com internet ativada, clique no botão abaixo para ativar o leitor QR-Code e direcione o foco da câmera para a figura presente na coleira do pet.</p></b><br>        
+            </div>
+            <a href="https://alecpo.github.io/qrcode/index.html" class="btnQR btn btn-outline-dark"><h4><b>Leitor QR-Code</b></h4></a>
+        </section>
+
+        <selection>
+            <div id="leiaMais" >
+                <p align="center"><b><h1>Conheça nosso projeto</h1></b></p>
+                <img id="triangle_icon" src="./img/login/triangle_icon.png">
+            </div>
+        </selection>
+        <footer class="footer">
+            <b><p>&copy; Info Pets 2017 Todos os direitos reservados</p></b>          
+        </footer>
+    </body>
+
+</html>

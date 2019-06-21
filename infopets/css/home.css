@@ -1,0 +1,66 @@
+.menu_topo{
+    position: relative;
+    margin: 0px;
+}
+#div0{
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.div1{
+    width: 40%;
+    height: 33%;
+    margin-top: 5%;
+    font-size: 50px; 
+    background-color: brown;
+}
+@media(max-width: 800px){
+    .div1{
+        width: 90%;
+    }
+}
+.div1>p{
+    color: white;
+}
+.bemV{
+    position: absolute;
+    right: 35px;
+}
+.listaPetsBlock{
+    position: relative;
+    width: 25%;
+    margin-left: 14%;
+    margin-top: 8%;
+}
+.listaPets{
+    position: relative;
+    margin-top: 2%;
+    margin-left: 10%;
+}
+.btnCadastrar{
+    position: relative;
+    top: -550px;
+    margin-left: 14%;
+}
+#aNomePet{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+#aNomePet:hover{
+    color: blueviolet;
+}
+.footer_home{
+    clear: both;
+    position: relative;
+    padding-left: 10px;
+    font-family: inherit;
+    font-size: 13px;        
+    color: white;
+    background-color: #707070;
+}
